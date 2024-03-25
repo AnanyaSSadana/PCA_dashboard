@@ -1,0 +1,160 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  background: linear-gradient(to bottom,#434343, #000000); 
+  min-height: 100%;
+  color: #f9f6f6;
+  line-height: 2;
+}
+
+h3 {
+  padding-top: 20px; /* Space above the header */
+  color: rgb(182, 243, 210); /* Set the color for visibility */
+  text-align: center; /* Center the text */
+}
+
+.selected {
+    stroke: #ffab00;
+    stroke-width: 2;
+}
+
+.dot:hover {
+  cursor: pointer;
+}
+
+.slider-width {
+    width: 50%; /* or any other size */
+    margin: auto; /* This centers the slider in the container */
+}
+
+.border-right {
+  border-right: 1px solid #2f312f; 
+}
+
+.border-bottom {
+  border-bottom: 1px solid #2f312f; 
+}
+
+/* Additional styles to ensure the SVG fits well */
+svg {
+  width: 100%;
+  height: 80%;
+}
+
+.plot-container,
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px; /* Space inside the containers */
+  margin-bottom: 15px; /* Space between the containers */
+}
+
+/* Adjust the row class for better flex handling */
+.row {
+  display: flex;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.scree-plot-container,.kmeans-elbow-container,.biplot-attributes-container,.scatterplot-matrix-container {
+  height: 100%; /* Use full height of the parent container */
+}
+
+.biplot-container {
+  height: 80%; /* Use 80% of the parent container's height */
+}
+
+#scree-plot-container svg {
+  display: block; /* Prevents any unnecessary margins on the SVG */
+  width: 100%; /* Makes the SVG responsive */
+  height: auto; /* Adjust the height to maintain aspect ratio */
+  background-color: #6f7370;
+}
+
+#biplot-container svg {
+  display: block; /* Prevents any unnecessary margins on the SVG */
+  width: 100%; /* Makes the SVG responsive */
+  height: auto; /* Adjust the height to maintain aspect ratio */
+  background-color: #6f7370;
+}
+
+#scatterplot-matrix-container svg {
+  display: block; /* Prevents any unnecessary margins on the SVG */
+  width: 100%; /* Makes the SVG responsive */
+  height: auto; /* Adjust the height to maintain aspect ratio */
+  background-color: #6f7370;
+}
+
+#kmeans-elbow-container svg {
+  display: block; /* Prevents any unnecessary margins on the SVG */
+  width: 100%; /* Makes the SVG responsive */
+  height: 100%; /* Adjust the height to maintain aspect ratio */
+  background-color: #6f7370;
+}
+
+.svg-content-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+#tooltip {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: none; /* Ignore pointer events to allow mouse events on elements below */
+  z-index: 10;
+  color: black; /* Set the text color */
+  opacity: 0; /* Start invisible */
+  position: absolute;
+  text-align: center;
+  width: auto; /* Auto width based on content size */
+  height: auto; /* Auto height based on content size */
+  font: 12px sans-serif;
+  display: none; /* Hide it initially */
+}
+
+.attribute-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attribute-table .header-cell {
+  background-color: #6f7370;
+  color: rgb(219, 234, 233);
+  text-align: left;
+  padding: 8px;
+}
+
+.attribute-table .data-cell {
+  text-align: left;
+  padding: 8px;
+  background-color: #4d515a;
+  color: white;
+}
+
+#attributes-table-container .attribute-table .header-cell,
+#attributes-table-container .attribute-table .data-cell {
+    text-align: center;
+}
+
+#spotify-header{
+  color: rgb(37, 39, 37);
+  background-color: #349556;
+}
+
+
+/* Ensure the layout doesn't break on smaller screens */
+@media (max-width: 991px) {
+  .border-right {
+      border-right: none;
+  }
+  .plot-container,
+  .table-container {
+    height: auto; /* Adjust height for smaller screens */
+  }
+}
+
